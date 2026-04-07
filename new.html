@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>My DevOps App</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f2f2f2;
+text-align:center;
+}
+
+.container{
+margin-top:100px;
+background:white;
+padding:40px;
+width:400px;
+margin-left:auto;
+margin-right:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+border-radius:10px;
+}
+
+button{
+padding:10px 20px;
+background:#28a745;
+color:white;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My First DevOps App 🚀</h1>
+
+<p>Running on Azure VM with Nginx</p>
+
+<button onclick="hello()">Click Me</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+function hello(){
+
+document.getElementById("msg").innerHTML="App is working successfully!"
+
+}
+
+</script>
+
+</body>
+
+</html>
