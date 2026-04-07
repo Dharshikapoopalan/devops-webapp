@@ -1,0 +1,23 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- checkout: self
+  displayName: "Checkout Source Code"
+
+- script: |
+    echo "Files in repository"
+    ls -la
+  displayName: "List Repo Files"
+
+- script: |
+    docker build -t devops-webapp .
+  displayName: "Build Docker Image"
+
+- script: |
+    docker images
+  displayName: "Show Docker Images"
