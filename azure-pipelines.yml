@@ -1,0 +1,23 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: Checkout@1
+  displayName: "Pull code from GitHub"
+
+- script: |
+    echo "Listing files"
+    ls -la
+  displayName: "Check repository files"
+
+- script: |
+    echo "Build stage started"
+  displayName: "Build Application"
+
+- script: |
+    docker --version
+  displayName: "Check Docker Installation"
